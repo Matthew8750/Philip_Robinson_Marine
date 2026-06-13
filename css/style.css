@@ -1,56 +1,116 @@
-nav {
-    background-color: #1f335b;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0f0f0f;
+    color: white;
+}
+
+.navbar {
+    background: #223964;
     min-height: 110px;
+    padding: 20px 60px;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 50px;
 }
 
-.logo-section img {
-    width: 110px;
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.brand img {
+    width: 120px;
     height: auto;
 }
 
-.logo-section h1 {
+.brand h1 {
     font-size: 2.4rem;
+    color: white;
 }
 
-/* Mobile */
+nav {
+    display: flex;
+    gap: 40px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    min-height: calc(100vh - 110px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.hero h2 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.6rem;
+    color: #dcdcdc;
+}
+
+/* Mobile fix */
 @media (max-width: 768px) {
-    nav {
+    .navbar {
         flex-direction: column;
-        min-height: auto;
         padding: 20px;
-        gap: 15px;
+        gap: 20px;
     }
 
-    .logo-section {
+    .brand {
         flex-direction: column;
         text-align: center;
         gap: 10px;
     }
 
-    .logo-section img {
-        width: 130px;
+    .brand img {
+        width: 140px;
     }
 
-    .logo-section h1 {
+    .brand h1 {
         font-size: 1.8rem;
     }
 
-    ul {
+    nav {
+        gap: 20px;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 15px;
     }
 
-    main h2 {
+    nav a {
+        font-size: 1rem;
+    }
+
+    .hero h2 {
         font-size: 2.5rem;
-        text-align: center;
     }
 
-    main p {
+    .hero p {
         font-size: 1.2rem;
     }
 }
